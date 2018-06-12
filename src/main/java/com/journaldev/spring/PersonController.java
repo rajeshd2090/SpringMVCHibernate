@@ -23,13 +23,19 @@ public class PersonController {
 		this.personService = ps;
 	}
 	
+	@RequestMapping(value = "/", method = RequestMethod.GET)
+	public String initPersons(Model model) {
+		model.addAttribute("person", new Person());
+		model.addAttribute("listPersons", this.personService.listPersons());
+		return "person";
+	}
+	
 	@RequestMapping(value = "/persons", method = RequestMethod.GET)
 	public String listPersons(Model model) {
 		model.addAttribute("person", new Person());
 		model.addAttribute("listPersons", this.personService.listPersons());
 		return "person";
 	}
-	
 	//For add and update person both
 	@RequestMapping(value= "/person/add", method = RequestMethod.POST)
 	public String addPerson(@ModelAttribute("person") Person p){
