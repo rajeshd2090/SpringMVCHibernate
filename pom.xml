@@ -13,6 +13,8 @@
 		<org.aspectj-version>1.7.4</org.aspectj-version>
 		<org.slf4j-version>1.7.5</org.slf4j-version>
 		<hibernate.version>4.3.5.Final</hibernate.version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  
 	</properties>
 	<dependencies>
 		<!-- Spring -->
@@ -147,6 +149,14 @@
 			<version>4.7</version>
 			<scope>test</scope>
 		</dependency>
+	  <!-- https://mvnrepository.com/artifact/com.microsoft.sqlserver/sqljdbc4 -->
+	<!-- https://mvnrepository.com/artifact/com.microsoft.sqlserver/mssql-jdbc -->
+<dependency>
+    <groupId>com.microsoft.sqlserver</groupId>
+    <artifactId>mssql-jdbc</artifactId>
+    <version>6.5.3.jre8-preview</version>
+    
+</dependency>
 
 	</dependencies>
     <build>
